@@ -1,16 +1,16 @@
-# Unofficial Snap Packaging for [Project]
-This is the unofficial snap packaging for [Project], [Snaps are universal Linux packages](https://snapcraft.io).
+# Unofficial Snap Packaging for Tidy
+This is the unofficial snap packaging for [Tidy](http://www.html-tidy.org), [Snaps are universal Linux packages](https://snapcraft.io).
 
 Refer [snap/README.md](snap/README.md) for user-oriented information.
 
 ## Remaining Tasks
-Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) are working to land snap install documentation and the [snapcraft.yaml](https://github.com/Lin-Buo-Ren/snapcrafters-template-plus/blob/master/snap/snapcraft.yaml) upstream so [Project] can authoritatively publish future releases.
+Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) are working to land snap install documentation and the [snapcraft.yaml](https://github.com/Lin-Buo-Ren/snapcrafters-template-plus/blob/master/snap/snapcraft.yaml) upstream so Tidy can authoritatively publish future releases.
 
 - [x] *Import* the [Snapcrafters Template Plus](https://github.com/Lin-Buo-Ren/snapcrafters-template-plus) repository to your own GitHub account and name it as _snap_name_-snap (or any valid name you prefer) using GitHub's [Import repository](https://github.com/new/import) feature
   - It is recommended to *avoid forking the template repository* unless you're working on the template itself because you can only fork a repository once
-- [ ] Update the description of the repository
-- [ ] Update logos and references to `[Project]` and `[my-snap-name]` in `README.md`, `snap/snapcraft.yaml`, and `snap/README.md`
-- [ ] Add upstream contact information to this `README.md`
+- [x] Update the description of the repository
+- [x] Update logos and references to `[Project]` and `[my-snap-name]` in `README.md`, `snap/snapcraft.yaml`, and `snap/README.md`
+- [x] Add upstream contact information to this `README.md`
 - [ ] Create a snap that runs in `devmode`
 - [ ] Add a screenshot to `snap/README.md`
 - [ ] Register the snap in the store, **using the preferred upstream name**(i.e. without custom postfix).  If the preferred upstream name is not available or reserved, [file a request to take over the preferred upstream name](https://dashboard.snapcraft.io/register-snap) and temporary use a name with personal postfix instead.
@@ -41,20 +41,12 @@ Depending on the upstream's response:
 
 If you have any questions, [post in the Snapcraft forum](https://forum.snapcraft.io).
 
-<!-- 
-
 ## The Snapcrafters
-| [![Your Name](http://gravatar.com/avatar/bc0bced65e963eb5c3a16cab8b004431/?s=128)](https://github.com/yourname/) |
+| [![林博仁(Buo-ren, Lin) Avatar](http://gravatar.com/avatar/66a5b84972e73e895d5d68d48b1e1e21/?s=128)](https://github.com/Lin-Buo-Ren) |
 | :----------------------------------------------------------: |
-|          [Your Name](https://github.com/yourname/)           |
-
---> 
-
-<!-- Uncomment and modify this when you have upstream contacts
+|          [林博仁(Buo-ren, Lin)](https://github.com/Lin-Buo-Ren)           |
 
 ## Upstream
-| [![Upstream Name](http://gravatar.com/avatar/bc0bced65e963eb5c3a16cab8b004431?s=128)](https://github.com/upstreamname) |
+| <a href='https://github.com/htacg/tidy-html5/issues'><img src='https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png' alt='GitHub Mark' style='height: 128px' /></a> |
 | :----------------------------------------------------------: |
-|       [Upstream Name](https://github.com/upstreamname)       |
-
--->
+|       [htacg/tidy-html5 Issue Tracker](https://github.com/htacg/tidy-html5/issues)       |

@@ -1,10 +1,10 @@
-# Unofficial Snap Packaging for [Project]
-![Icon of [Project]](gui/icon.png "Icon of [Project]")
+# Unofficial Snap Packaging for Tidy
+![Icon of Tidy](gui/icon.png "Icon of Tidy")
 
-**This is the unofficial snap for [Project]**, *"Single-line elevator pitch for your amazing snap"*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
+**This is the unofficial snap for Tidy**, *"The granddaddy of HTML tools."*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
 
 <!-- Uncomment and modify this when you are provided a build status badge
-[![Build Status Badge of the `my-snap-name` Snap](https://build.snapcraft.io/badge/snapcrafters/fork-and-rename-me.svg "Build Status of the `my-snap-name` snap")](https://build.snapcraft.io/user/snapcrafters/fork-and-rename-me)
+[![Build Status Badge of the `tidy` Snap](https://build.snapcraft.io/badge/Lin-Buo-Ren/tidy.svg "Build Status of the `tidy` snap")](https://build.snapcraft.io/user/Lin-Buo-Ren/tidy)
 -->
 
 <!-- Uncomment and modify this when you have a screenshot
@@ -18,21 +18,21 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
 
 ### In Terminal
     # Install Snap #
-    sudo snap install --channel=edge --devmode my-snap-name
-    #sudo snap install --channel=beta my-snap-name
-    #sudo snap install my-snap-name
+    sudo snap install --channel=edge --devmode tidy
+    #sudo snap install --channel=beta tidy
+    #sudo snap install tidy
     
     # Connect the Snap to Required Interfaces #
     ## _plug_name_: Reasoning of connecting _plug_name_ ##
-    sudo snap connect my-snap-name:_plug_name_
+    sudo snap connect tidy:_plug_name_
     
     # Connect the Snap to Optional Interfaces #
     ## _plug_name_: Reasoning of connecting _plug_name_ ##
-    sudo snap connect my-snap-name:_plug_name_
+    sudo snap connect tidy:_plug_name_
 
 <!--
 ### The Graphical Way
-Browse <https://snapcraft.io/_snap_name_> and follow the instructions.
+Browse <https://snapcraft.io/tidy> and follow the instructions.
 -->
 
 ## What is Working
@@ -44,10 +44,8 @@ Browse <https://snapcraft.io/_snap_name_> and follow the instructions.
 ## What is NOT Tested...yet
 * [A list of functionallities that are not tested for any reasons.]
 
-<!--
 ## Support
 * Report issues regarding using this snap to the issue tracker:  
-  <https://github.com/_repo_owner_/_repo_name_/issues>
+  <https://github.com/Lin-Buo-Ren/tiny-snap/issues>
 * You may also post on the Snapcraft Forum, under the `snap` topic category:  
   <https://forum.snapcraft.io/c/snap>
--->

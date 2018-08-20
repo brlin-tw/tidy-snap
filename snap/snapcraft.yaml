@@ -1,6 +1,6 @@
 %YAML 1.2
 ---
-# Snapcraft Recipe for [Project]
+# Snapcraft Recipe for Tidy
 # ------------------------------
 # This file is in the YAML data serialization format:
 # http://yaml.org
@@ -14,33 +14,17 @@
 # For support refer to the snapcraft section in the Snapcraft Forum:
 # https://forum.snapcraft.io/c/snapcraft
 
-# All following comments, including this one, are designed to be stripped
-# before contributing the recipe to the upstream
-
-# my-awesome-snap, my-app-name, my-app-command, my-app-launch, my-app-part
-# are placeholders text meant to be replaced by appropriate content
-
-name: my-awesome-snap
-summary: Single-line elevator pitch for your amazing snap under 79 chars.
+name: tidy
+summary: The granddaddy of HTML tools
 description: |
-  This is my-awesome-snap's description. You have a paragraph or two to tell
-  the most important story about your snap. Keep it under 100 words though,
-  we live in tweetspace and your description wants to look good in the snap
-  store.
+  Tidy is a console application for Mac OS X, Linux, Windows, UNIX, and more. It corrects and cleans up HTML and XML documents by fixing markup errors and upgrading legacy code to modern standards.
 
-# Just for humans, typically '1.2+git' or '1.3.2'
-# The wrapping single quotes are often required to avoid the version string
-# being accidentally interpreted as a YAML floating point number(like '1.2').
-# http://yaml.org/spec/1.2/spec.html#id2804092
-# https://arp242.net/weblog/yaml_probably_not_so_great_after_all.html#surprising-behaviour
+  This is NOT an official snap, for any issues regarding using this snap please refer to the issue tracker:
+
+  https://github.com/Lin-Buo-Ren/tidy-snap/issues
+
 version: determined-by-version-script
 
-# (OPTIONAL) The version string can also be dynamically determined via scriping
-# , in this case the value of the `version` key will be ignored (but the key is
-# still required).
-# NOTE: The resulting version string cannot be longer than 32 characters
-#version-script: snap/utilites/set-snap-version.bash
-#version-script: git -C parts/my-app-part/src describe --always --dirty --tags
 version-script: |
   set \
     -o errexit \
@@ -48,7 +32,7 @@ version-script: |
 
   upstream_version="$(
     git \
-      -C parts/my-app-part/src \
+      -C parts/tidy/src \
       describe \
       --always \
       --dirty=-d \
@@ -67,131 +51,114 @@ version-script: |
 
   printf -- '%s' "${upstream_version}+pkg-${packaging_revision}"
 
-confinement: devmode # use 'strict' once you have the right plugs and slots
+confinement: devmode
 grade: devel
 icon: snap/gui/icon.png
 
 apps:
-  # If the my-app-name is identical with the my-awesome-snap it can be directly run
-  # with `my-awesome-snap` or `snap run my-awesome-snap`, otherwise it can only be run
-  # via `snap run my-awesome-snap.my-app-name` in the terminal.
-  my-app-name:
-    command: desktop-launch my-app-launch
-    #desktop: share/applications/my-app-name.desktop
+  tidy:
+    command: tidy
     plugs:
-    - desktop
-    - desktop-legacy
-    - x11
-    - unity7
-    - wayland
-
-    #slots:
+    - home
+    - removable-media
 
 parts:
   # Launchers to fix the runtime environment to make the snap works
-  launchers:
-    source: snap/launchers
-    source-type: local
-    plugin: dump
+  #launchers:
+    #source: snap/launchers
+    #source-type: local
+    #plugin: dump
 
-    override-build: |
-      set \
-        -o errexit \
-        -o nounset
+    #override-build: |
+      #set \
+        #-o errexit \
+        #-o nounset
 
-      mkdir \
-        --parents \
-        "${SNAPCRAFT_PART_INSTALL}"/bin
-      find \
-        . \
-        -type f \
-        -perm /111 \
-        -print0 \
-        | xargs \
-          --no-run-if-empty \
-          --null \
-          --verbose \
-          -I{} \
-          cp \
-          {} \
-          "${SNAPCRAFT_PART_INSTALL}"/bin
+      #mkdir \
+        #--parents \
+        #"${SNAPCRAFT_PART_INSTALL}"/bin
+      #find \
+        #. \
+        #-type f \
+        #-perm /111 \
+        #-print0 \
+        #| xargs \
+          #--no-run-if-empty \
+          #--null \
+          #--verbose \
+          #-I{} \
+          #cp \
+          #{} \
+          #"${SNAPCRAFT_PART_INSTALL}"/bin
 
   # Patches to make the snap working if it can't be solved via launchers
-  patches:
-    source: snap/patches
-    source-type: local
-    plugin: dump
+  #patches:
+    #source: snap/patches
+    #source-type: local
+    #plugin: dump
 
-    override-build: |
-      set \
-        -o errexit \
-        -o nounset
+    #override-build: |
+      #set \
+        #-o errexit \
+        #-o nounset
 
-      mkdir \
-        --parents \
-        "$SNAPCRAFT_PART_INSTALL"/patches
-      find \
-        . \
-        -type f \
-        -and \
-        -not \
-        -name README.md \
-        -print0 \
-        | xargs \
-          --no-run-if-empty \
-          --null \
-          --verbose \
-          -I{} \
-          cp \
-          {} \
-          "${SNAPCRAFT_PART_INSTALL}"/patches
+      #mkdir \
+        #--parents \
+        #"$SNAPCRAFT_PART_INSTALL"/patches
+      #find \
+        #. \
+        #-type f \
+        #-and \
+        #-not \
+        #-name README.md \
+        #-print0 \
+        #| xargs \
+          #--no-run-if-empty \
+          #--null \
+          #--verbose \
+          #-I{} \
+          #cp \
+          #{} \
+          #"${SNAPCRAFT_PART_INSTALL}"/patches
 
-    stage:
-    - patches/*
-    override-prime: 'true'
+    #stage:
+    #- patches/*
+    #override-prime: 'true'
 
   # Helper programs to aid in certain part of snap building, like a install program for a certain part
-  utilities:
-    source: snap/utilities
-    source-type: local
-    plugin: dump
+  #utilities:
+    #source: snap/utilities
+    #source-type: local
+    #plugin: dump
 
-    override-build: |
-      set \
-        -o errexit \
-        -o nounset
+    #override-build: |
+      #set \
+        #-o errexit \
+        #-o nounset
 
-      mkdir \
-        --parents \
-        "$SNAPCRAFT_PART_INSTALL"/utilities
-      find \
-        . \
-        -type f \
-        -and \
-        -not \
-        -name README.md \
-        -print0 \
-        | xargs \
-          --no-run-if-empty \
-          --null \
-          --verbose \
-          -I{} \
-          cp \
-          {} \
-          "${SNAPCRAFT_PART_INSTALL}"/utilities
-    override-prime: 'true'
+      #mkdir \
+        #--parents \
+        #"$SNAPCRAFT_PART_INSTALL"/utilities
+      #find \
+        #. \
+        #-type f \
+        #-and \
+        #-not \
+        #-name README.md \
+        #-print0 \
+        #| xargs \
+          #--no-run-if-empty \
+          #--null \
+          #--verbose \
+          #-I{} \
+          #cp \
+          #{} \
+          #"${SNAPCRAFT_PART_INSTALL}"/utilities
+    #override-prime: 'true'
 
-  yad:
-    after:
-    - desktop-gtk3
-
-    plugin: nil
-    stage-packages:
-    - yad
-
-  my-app-part:
-    after:
-    - patches
+  tidy:
+    #after:
+    #- patches
 
     # Run `snapcraft help sources` for supported keywords on pulling
     # a part's source ingredients
