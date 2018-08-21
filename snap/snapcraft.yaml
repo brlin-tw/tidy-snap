@@ -40,7 +40,7 @@ apps:
 parts:
   tidy:
     source: git://github.com/htacg/tidy-html5.git
-    source-depth: 1000
+    source-depth: 1
 
     # For stable release build
     #source-tag:
