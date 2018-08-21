@@ -15,7 +15,7 @@
 # https://forum.snapcraft.io/c/snapcraft
 
 name: tidy-brlin
-summary: HTML parser and pretty printer.  The granddaddy of HTML tools
+summary: HTML parser and pretty printer.  The grand daddy of HTML tools
 description: |
   Tidy is a console application for Mac OS X, Linux, Windows, UNIX, and more. It corrects and cleans up HTML and XML documents by fixing markup errors and upgrading legacy code to modern standards.
 
