@@ -14,8 +14,7 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
 
 ### In Terminal
     # Install Snap #
-    sudo snap install --channel=beta tidy-brlin
-    #sudo snap install tidy-brlin
+    sudo snap install tidy-brlin
     
     # Connect the Snap to Optional Interfaces #
     ## `removable-media`: For accessing files under /media and /run/media ##
