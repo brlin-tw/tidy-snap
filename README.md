@@ -47,6 +47,6 @@ If you have any questions, [post in the Snapcraft forum](https://forum.snapcraft
 |          [林博仁(Buo-ren, Lin)](https://github.com/Lin-Buo-Ren)           |
 
 ## Upstream
-| <a href='https://github.com/htacg/tidy-html5/issues'><img src='https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png' alt='GitHub Mark' style='height: 128px' /></a> |
+| <a href='https://github.com/htacg/tidy-html5/issues'><img src='https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png' alt='GitHub Mark' style='height: 128px' height='128px' /></a> |
 | :----------------------------------------------------------: |
 | [htacg/tidy-html5 Issue Tracker](https://github.com/htacg/tidy-html5/issues) |
