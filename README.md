@@ -19,7 +19,7 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - [x] Add install instructions to `snap/README.md`
 - [x] Update snap store metadata, icons and screenshots
 - [x] File an Intent-To-Package issue/bug to the upstream's contact or issue/bug tracker to consolidate and let the upstream acknowledge the effort - [link](https://github.com/htacg/tidy-html5/issues/748)
-- [ ] Convert the snap to `strict` confinement, or `classic` confinement if it qualifies
+- [x] Convert the snap to `strict` confinement, or `classic` confinement if it qualifies
 - [ ] Publish the confined snap in the Snap store beta channel
 - [ ] Update the install instructions in `snap/README.md`
 - [ ] Post a call for testing on the [Snapcraft Forum](https://forum.snapcraft.io) - [link]()
