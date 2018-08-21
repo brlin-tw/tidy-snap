@@ -1,7 +1,7 @@
 # Unofficial Snap Packaging for Tidy
 ![Icon of Tidy](gui/icon.png "Icon of Tidy")
 
-**This is the unofficial snap for Tidy**, *"The granddaddy of HTML tools."*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
+**This is the unofficial snap for Tidy**, *"HTML parser and pretty printer.  The grand daddy of HTML tools."*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
 
 <!-- Uncomment and modify this when you are provided a build status badge
 [![Build Status Badge of the `tidy` Snap](https://build.snapcraft.io/badge/Lin-Buo-Ren/tidy.svg "Build Status of the `tidy` snap")](https://build.snapcraft.io/user/Lin-Buo-Ren/tidy)
@@ -16,22 +16,16 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
 
 ### In Terminal
     # Install Snap #
-    sudo snap install --channel=edge --devmode tidy
-    #sudo snap install --channel=beta tidy
-    #sudo snap install tidy
-    
-    # Connect the Snap to Required Interfaces #
-    ## _plug_name_: Reasoning of connecting _plug_name_ ##
-    sudo snap connect tidy:_plug_name_
+    sudo snap install --channel=edge --devmode tidy-brlin
+    #sudo snap install --channel=beta tidy-brlin
+    #sudo snap install tidy-brlin
     
     # Connect the Snap to Optional Interfaces #
-    ## _plug_name_: Reasoning of connecting _plug_name_ ##
-    sudo snap connect tidy:_plug_name_
+    ## `removable-media`: For accessing files under /media and /run/media ##
+    sudo snap connect tidy-brlin:removable-media
 
-<!--
 ### The Graphical Way
-Browse <https://snapcraft.io/tidy> and follow the instructions.
--->
+Browse <https://snapcraft.io/tidy-brlin> and follow the instructions.
 
 ## What is Working
 * [A list of functionallities that are verified working]
