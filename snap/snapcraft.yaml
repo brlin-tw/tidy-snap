@@ -24,32 +24,7 @@ description: |
   https://github.com/Lin-Buo-Ren/tidy-snap/issues
 
 version: determined-by-version-script
-
-version-script: |
-  set \
-    -o errexit \
-    -o nounset
-
-  upstream_version="$(
-    git \
-      -C parts/tidy/src \
-      describe \
-      --always \
-      --dirty=-d \
-      --tags \
-    | sed s/^v//
-  )"
-
-  packaging_revision="$(
-    git \
-      describe \
-      --abbrev=4 \
-      --always \
-      --match nothing \
-      --dirty=-d
-  )"
-
-  printf -- '%s' "${upstream_version}+pkg-${packaging_revision}"
+version-script: snap/utilities/set-snap-version.bash
 
 confinement: devmode
 grade: devel
@@ -63,130 +38,31 @@ apps:
     - removable-media
 
 parts:
-  # Launchers to fix the runtime environment to make the snap works
-  #launchers:
-    #source: snap/launchers
-    #source-type: local
-    #plugin: dump
-
-    #override-build: |
-      #set \
-        #-o errexit \
-        #-o nounset
-
-      #mkdir \
-        #--parents \
-        #"${SNAPCRAFT_PART_INSTALL}"/bin
-      #find \
-        #. \
-        #-type f \
-        #-perm /111 \
-        #-print0 \
-        #| xargs \
-          #--no-run-if-empty \
-          #--null \
-          #--verbose \
-          #-I{} \
-          #cp \
-          #{} \
-          #"${SNAPCRAFT_PART_INSTALL}"/bin
-
-  # Patches to make the snap working if it can't be solved via launchers
-  #patches:
-    #source: snap/patches
-    #source-type: local
-    #plugin: dump
-
-    #override-build: |
-      #set \
-        #-o errexit \
-        #-o nounset
-
-      #mkdir \
-        #--parents \
-        #"$SNAPCRAFT_PART_INSTALL"/patches
-      #find \
-        #. \
-        #-type f \
-        #-and \
-        #-not \
-        #-name README.md \
-        #-print0 \
-        #| xargs \
-          #--no-run-if-empty \
-          #--null \
-          #--verbose \
-          #-I{} \
-          #cp \
-          #{} \
-          #"${SNAPCRAFT_PART_INSTALL}"/patches
-
-    #stage:
-    #- patches/*
-    #override-prime: 'true'
-
-  # Helper programs to aid in certain part of snap building, like a install program for a certain part
-  #utilities:
-    #source: snap/utilities
-    #source-type: local
-    #plugin: dump
-
-    #override-build: |
-      #set \
-        #-o errexit \
-        #-o nounset
-
-      #mkdir \
-        #--parents \
-        #"$SNAPCRAFT_PART_INSTALL"/utilities
-      #find \
-        #. \
-        #-type f \
-        #-and \
-        #-not \
-        #-name README.md \
-        #-print0 \
-        #| xargs \
-          #--no-run-if-empty \
-          #--null \
-          #--verbose \
-          #-I{} \
-          #cp \
-          #{} \
-          #"${SNAPCRAFT_PART_INSTALL}"/utilities
-    #override-prime: 'true'
-
   tidy:
-    #after:
-    #- patches
+    source: git://github.com/htacg/tidy-html5.git
+    source-depth: 1000
 
-    # Run `snapcraft help sources` for supported keywords on pulling
-    # a part's source ingredients
-    #source:
-    #source-type:
+    # For stable release build
     #source-tag:
-    #source-depth:
 
-    # Run `snapcraft plugins` for supported helper plugins
-    # Run `snapcraft help plugins` for supported keywords on building
-    # a part
-    plugin: nil
+    plugin: cmake
+    configflags:
+    - -DCMAKE_BUILD_TYPE=Release
 
-    override-stage: |
-      set \
-        -o errexit \
-        -o nounset
+    build-packages:
+    - build-essential
+    - xsltproc
 
-      snapcraftctl stage
-
-      find \
-        "${SNAPCRAFT_STAGE}"/share/applications \
-        -name '*.desktop' \
-        -print0 \
-        | xargs \
-          --no-run-if-empty \
-          --null \
-          --verbose \
-          sed \
-          --file "${SNAPCRAFT_STAGE}"/patches/patch-desktop-entries.sed \
-          --in-place
+    filesets:
+      executables:
+      - bin/*
+      library-headers:
+      - include/*
+      library-shared:
+      - lib/*.so*
+      library-static:
+      - lib/*.a
+      pkgconfig:
+      - lib/pkgconfig/*
+      manpages:
+      - share/man/*
