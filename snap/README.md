@@ -7,9 +7,7 @@
 [![Build Status Badge of the `tidy` Snap](https://build.snapcraft.io/badge/Lin-Buo-Ren/tidy.svg "Build Status of the `tidy` snap")](https://build.snapcraft.io/user/Lin-Buo-Ren/tidy)
 -->
 
-<!-- Uncomment and modify this when you have a screenshot
-![Screenshot of the Snapped Application](screenshots/screenshot.png "Screenshot of the Snapped Application")
--->
+![Screenshot of the Snapped Application](screenshots/tidy-help-heading.png "Screenshot of the Snapped Application")
 
 Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.png" align="top" width="24" /> with 💝 by Snapcrafters
 
