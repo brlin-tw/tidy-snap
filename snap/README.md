@@ -11,7 +11,7 @@
 
 Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.png" align="top" width="24" /> with 💝 by Snapcrafters
 
-## Installation (not available yet)
+## Installation
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
 ### In Terminal
