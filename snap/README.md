@@ -26,13 +26,14 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
 Browse <https://snapcraft.io/tidy-brlin> and follow the instructions.
 
 ## What is Working
-* [A list of functionallities that are verified working]
+* `tidy --help`
+* Beautify a file using external config
 
 ## What is NOT Working...yet 
-* [A list of functionallities that are verified not working]
+None so far.
 
 ## What is NOT Tested...yet
-* [A list of functionallities that are not tested for any reasons.]
+Anything else not listed in "What is Working".
 
 ## Support
 * Report issues regarding using this snap to the issue tracker:  
