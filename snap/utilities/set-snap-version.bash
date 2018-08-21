@@ -15,7 +15,7 @@ init(){
 
 	local \
 		upstream_version \
-		upstream_git_describe_version \
+		upstream_git_revision \
 		packaging_revision
 
 	upstream_version="$(
@@ -24,13 +24,13 @@ init(){
 			parts/tidy/src/version.txt
 	)"
 
-	upstream_git_describe_version="$(
+	upstream_git_revision="$(
 		git \
 			-C parts/tidy/src \
 			describe \
 			--always \
-			--dirty=-d \
-			--tags \
+			--dirty \
+			--match nothing \
 		| sed s/^v//
 	)"
 
@@ -46,7 +46,7 @@ init(){
 	printf \
 		-- \
 		'%s' \
-		"${upstream_git_describe_version}+pkg-${packaging_revision}"
+		"${upstream_version}-g${upstream_git_revision}+pkg-${packaging_revision}"
 
 	exit 0
 }
