@@ -15,6 +15,7 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - [x] Add a screenshot to `snap/README.md`
 - [ ] (Name reserved, taking in progress...)Register the snap in the store, **using the preferred upstream name**(i.e. without custom postfix).  If the preferred upstream name is not available or reserved, [file a request to take over the preferred upstream name](https://dashboard.snapcraft.io/register-snap) and temporary use a name with personal postfix instead.
 - [x] Publish the `devmode` snap in the Snap store edge channel
+- [x] Add the provided Snapcraft build badge to `snap/README.md`
 - [x] Add install instructions to `snap/README.md`
 - [x] Update snap store metadata, icons and screenshots
 - [ ] File an Intent-To-Package issue/bug to the upstream's contact or issue/bug tracker to consolidate and let the upstream acknowledge the effort - [link]()
@@ -22,7 +23,6 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - [ ] Publish the confined snap in the Snap store beta channel
 - [ ] Update the install instructions in `snap/README.md`
 - [ ] Post a call for testing on the [Snapcraft Forum](https://forum.snapcraft.io) - [link]()
-- [ ] Add the provided Snapcraft build badge to `snap/README.md`
 - [ ] Publish the snap in the Snap store stable channel
 - [ ] Update the install instructions in `snap/README.md`
 - [ ] Post an announcement in the [Snapcraft Forum](https://forum.snapcraft.io) - [link]()

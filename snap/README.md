@@ -3,9 +3,7 @@
 
 **This is the unofficial snap for Tidy**, *"HTML parser and pretty printer.  The grand daddy of HTML tools."*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
 
-<!-- Uncomment and modify this when you are provided a build status badge
-[![Build Status Badge of the `tidy` Snap](https://build.snapcraft.io/badge/Lin-Buo-Ren/tidy.svg "Build Status of the `tidy` snap")](https://build.snapcraft.io/user/Lin-Buo-Ren/tidy)
--->
+[![Build Status Badge of the `tidy-brlin` Snap](https://build.snapcraft.io/badge/Lin-Buo-Ren/tidy-snap.svg "Build Status of the `tidy-brlin` snap")](https://build.snapcraft.io/user/Lin-Buo-Ren/tidy-brlin)
 
 ![Screenshot of the Snapped Application](screenshots/tidy-help-heading.png "Screenshot of the Snapped Application")
 
