@@ -25,7 +25,7 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - [x] Post a call for testing on the [Snapcraft Forum](https://forum.snapcraft.io) - [link](https://forum.snapcraft.io/t/call-for-testing-tidy-html-parser-and-pretty-printer-the-grand-daddy-of-html-tools/6973)
 - [x] Publish the snap in the Snap store stable channel
 - [x] Update the install instructions in `snap/README.md`
-- [ ] Post an announcement in the [Snapcraft Forum](https://forum.snapcraft.io) - [link]()
+- [x] Post an announcement in the [Snapcraft Forum](https://forum.snapcraft.io) - [link](https://forum.snapcraft.io/t/unofficial-snap-packaging-for-tidy-html-parser-and-pretty-printer-the-grand-daddy-of-html-tools/6976)
 - [ ] Submit a pull request or patch upstream that adds snap install documentation - [link]()
 - [ ] Submit a pull request or patch upstream that adds the `snapcraft.yaml` and any required assets/launchers - [link]()
 
