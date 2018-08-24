@@ -8,13 +8,4 @@ set \
 	-o nounset \
 	-o pipefail
 
-{
-	printf \
-		-- \
-		'tiny-launch: Warning: This snap is now obselute due to the snap name migration, and will no longer recieve update.\n'
-	printf \
-		-- \
-		'tiny-launch: Info: Remove the `tiny-brlin` snap and install the new `tiny` snap to manually fix it.\n'
-} 1>&2
-
 exec tidy "${@}"

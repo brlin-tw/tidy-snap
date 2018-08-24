@@ -13,7 +13,7 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - [x] Add upstream contact information to this `README.md`
 - [x] Create a snap that runs in `devmode`
 - [x] Add a screenshot to `snap/README.md`
-- [ ] (Name reserved, taking in progress...)Register the snap in the store, **using the preferred upstream name**(i.e. without custom postfix).  If the preferred upstream name is not available or reserved, [file a request to take over the preferred upstream name](https://dashboard.snapcraft.io/register-snap) and temporary use a name with personal postfix instead.
+- [x] Register the snap in the store, **using the preferred upstream name**(i.e. without custom postfix).  If the preferred upstream name is not available or reserved, [file a request to take over the preferred upstream name](https://dashboard.snapcraft.io/register-snap) and temporary use a name with personal postfix instead.
 - [x] Publish the `devmode` snap in the Snap store edge channel
 - [x] Add the provided Snapcraft build badge to `snap/README.md`
 - [x] Add install instructions to `snap/README.md`

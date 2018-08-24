@@ -14,14 +14,14 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
 
 ### In Terminal
     # Install Snap #
-    sudo snap install tidy-brlin
+    sudo snap install tidy
     
     # Connect the Snap to Optional Interfaces #
     ## `removable-media`: For accessing files under /media and /run/media ##
-    sudo snap connect tidy-brlin:removable-media
+    sudo snap connect tidy:removable-media
 
 ### The Graphical Way
-Browse <https://snapcraft.io/tidy-brlin> and follow the instructions.
+Browse <https://snapcraft.io/tidy> and follow the instructions.
 
 ## What is Working
 * `tidy --help`
