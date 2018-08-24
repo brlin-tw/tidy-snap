@@ -49,10 +49,13 @@ parts:
 
   tidy:
     source: git://github.com/htacg/tidy-html5.git
-    source-depth: 1
+    source-depth: 30
 
-    # For stable release build
-    source-tag: '5.6.0'
+    # For official releases
+    #source-tag: '5.6.0'
+
+    # For `next` branch releases
+    source-commit: 5f7e367cb54563dabda4bf4e3c11c6ecc68a0fa3
 
     plugin: cmake
     configflags:
