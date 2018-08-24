@@ -23,6 +23,11 @@ description: |
 
   https://github.com/Lin-Buo-Ren/tidy-snap/issues
 
+  This snap is now OBSULETE due to the name change, in order to continue recieve updates please remove this snap and install the new `tidy` snap:
+
+      $ sudo snap remove tidy-brlin
+      $ sudo snap install tidy
+
 version: determined-by-version-script
 version-script: snap/utilities/set-snap-version.bash
 
@@ -32,12 +37,21 @@ icon: snap/gui/icon.png
 
 apps:
   tidy:
-    command: tidy
+    command: tidy-launch
     plugs:
     - home
     - removable-media
 
 parts:
+  launchers:
+    source: snap/launchers
+
+    plugin: dump
+    organize:
+      tidy-launch: bin/tidy-launch
+    stage:
+    - bin/*
+
   tidy:
     source: git://github.com/htacg/tidy-html5.git
     source-depth: 1
