@@ -1,11 +1,11 @@
 # Unofficial Snap Packaging for Tidy
-![Icon of Tidy](gui/icon.png "Icon of Tidy")
+![Icon of Tidy](https://cdn.rawgit.com/Lin-Buo-Ren/tidy-snap/c0b83825/snap/gui/icon.png "Icon of Tidy")
 
 **This is the unofficial snap for Tidy**, *"HTML parser and pretty printer.  The grand daddy of HTML tools."*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
 
 [![Build Status Badge of the `tidy-brlin` Snap](https://build.snapcraft.io/badge/Lin-Buo-Ren/tidy-snap.svg "Build Status of the `tidy-brlin` snap")](https://build.snapcraft.io/user/Lin-Buo-Ren/tidy-brlin)
 
-![Screenshot of the Snapped Application](screenshots/tidy-help-heading.png "Screenshot of the Snapped Application")
+![Screenshot of the Snapped Application](https://cdn.rawgit.com/Lin-Buo-Ren/tidy-snap/c0b83825/snap/screenshots/tidy-help-heading.png "Screenshot of the Snapped Application")
 
 Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.png" align="top" width="24" /> with 💝 by Snapcrafters
 
