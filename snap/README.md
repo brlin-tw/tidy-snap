@@ -35,6 +35,6 @@ Anything else not listed in "What is Working".
 
 ## Support
 * Report issues regarding using this snap to the issue tracker:  
-  <https://github.com/Lin-Buo-Ren/tiny-snap/issues>
+  <https://github.com/Lin-Buo-Ren/tidy-snap/issues>
 * You may also post on the Snapcraft Forum, under the `snap` topic category:  
   <https://forum.snapcraft.io/c/snap>
