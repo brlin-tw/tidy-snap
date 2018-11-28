@@ -32,7 +32,9 @@ icon: snap/gui/icon.png
 
 apps:
   tidy:
-    command: tidy-launch
+    command: >
+      locales-launch
+      tidy-launch
     plugs:
     - home
     - removable-media
@@ -46,6 +48,8 @@ parts:
       '*-launch': bin/
     stage:
     - bin/*
+
+  locales-launch:
 
   tidy:
     source: git://github.com/htacg/tidy-html5.git
