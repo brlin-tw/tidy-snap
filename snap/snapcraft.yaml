@@ -43,7 +43,7 @@ parts:
 
     plugin: dump
     organize:
-      tidy-launch: bin/tidy-launch
+      '*-launch': bin/
     stage:
     - bin/*
 
