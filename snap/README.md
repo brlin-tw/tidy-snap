@@ -1,5 +1,5 @@
 # Unofficial Snap Packaging for Tidy
-![Icon of Tidy](https://cdn.rawgit.com/Lin-Buo-Ren/tidy-snap/c0b83825/snap/gui/icon.png "Icon of Tidy")
+![Placeholder Logo of Tidy](https://cdn.rawgit.com/Lin-Buo-Ren/tidy-snap/c0b83825/snap/gui/icon.png "Placeholder Logo of Tidy")
 
 **This is the unofficial snap for Tidy**, *"HTML parser and pretty printer.  The grand daddy of HTML tools."*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
 
@@ -35,6 +35,6 @@ Anything else not listed in "What is Working".
 
 ## Support
 * Report issues regarding using this snap to the issue tracker:  
-  <https://github.com/Lin-Buo-Ren/tiny-snap/issues>
+  <https://github.com/Lin-Buo-Ren/tidy-snap/issues>
 * You may also post on the Snapcraft Forum, under the `snap` topic category:  
   <https://forum.snapcraft.io/c/snap>
