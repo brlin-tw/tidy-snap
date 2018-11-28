@@ -24,7 +24,7 @@ description: |
   https://github.com/Lin-Buo-Ren/tidy-snap/issues
 
 version: determined-by-version-script
-version-script: snap/utilities/set-snap-version.bash
+version-script: snap/local/utilities/set-snap-version.bash
 
 confinement: strict
 grade: stable
@@ -39,7 +39,7 @@ apps:
 
 parts:
   launchers:
-    source: snap/launchers
+    source: snap/local/launchers
 
     plugin: dump
     organize:
