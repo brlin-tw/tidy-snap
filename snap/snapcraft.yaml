@@ -39,6 +39,7 @@ apps:
 
 plugs:
   home:
+    read: all
   removable-media:
 
 parts:
