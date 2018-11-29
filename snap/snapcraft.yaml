@@ -74,6 +74,9 @@ parts:
     # * The user config(~/.tinyrc) isn't accessible in the first place due to strict confinement, a hardlink workaround is set in the `tiny-launch` launcher
     - -DENABLE_CONFIG_FILES=OFF
 
+    # DISABLED: Deprecated tool by upstream and no install rule available anyway
+    #- -DBUILD_TAB2SPACE=ON
+
     build-packages:
     - build-essential
     - xsltproc
