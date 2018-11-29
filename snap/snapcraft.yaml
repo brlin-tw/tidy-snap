@@ -36,9 +36,10 @@ apps:
       locales-launch
       tidy-launch
       tidy
-    plugs:
-    - home
-    - removable-media
+
+plugs:
+  home:
+  removable-media:
 
 parts:
   launchers:
