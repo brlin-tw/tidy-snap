@@ -68,6 +68,12 @@ parts:
     configflags:
     - -DCMAKE_BUILD_TYPE=Release
 
+    # Disable config files support:
+    # https://github.com/htacg/tidy-html5/issues/584
+    # * We use the upstream default config instead of the system-wide config(/etc/tidy.conf)
+    # * The user config(~/.tinyrc) isn't accessible in the first place due to strict confinement, a hardlink workaround is set in the `tiny-launch` launcher
+    - -DENABLE_CONFIG_FILES=OFF
+
     build-packages:
     - build-essential
     - xsltproc

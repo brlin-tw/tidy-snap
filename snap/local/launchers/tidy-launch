@@ -8,4 +8,44 @@ set \
 	-o nounset \
 	-o pipefail
 
+## Support user's default Tidy config when available
+## Refer: `tidy -help-env`
+### If the HTML_TIDY variable is already set(user demand using another config file) don't do anything
+if ! test -v HTML_TIDY; then
+    declare real_home_dir
+    real_home_dir="$(
+        getent \
+            passwd \
+            "${USER}" \
+        | cut \
+            --delimiter=: \
+            --fields=6
+    )"
+    
+    declare user_tidy_config_file="${real_home_dir}"/.tidyrc
+    declare snap_tidy_config_file="${SNAP_USER_COMMON}"/.tidyrc
+    
+    # Show warning if user do have a config file but not in the accessible location
+    if test -e "${user_tidy_config_file}"; then
+        if ! test -e "${snap_tidy_config_file}"; then
+            printf -- \
+                "tidy-launch: It appears that you have a tidyrc file in your home directory, however due to snapd's security confinement it is not accessible by the snap.\\n" \
+                >&2
+            # Intentionally print not expanded expression
+            # shellcheck disable=SC2016
+            printf -- \
+                'tidy-launch: If you wish to use it you have to create a hardlink manually by running the `ln "${HOME}"/.tidyrc "${HOME}"/snap/tidy/common` command in the terminal.\n' \
+                >&2
+            # Intentionally print not expanded expression
+            # shellcheck disable=SC2016
+            printf -- \
+                'tidy-launch: To silent this warning without linking run the `touch "${HOME}"/snap/tidy/common/.tidyrc` command in the terminal.\n' \
+                >&2
+        else
+            HTML_TIDY="${snap_tidy_config_file}"
+            export HTML_TIDY
+        fi
+    fi
+fi
+
 exec "${@}"
