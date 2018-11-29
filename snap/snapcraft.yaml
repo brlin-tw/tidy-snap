@@ -35,6 +35,7 @@ apps:
     command: >
       locales-launch
       tidy-launch
+      tidy
     plugs:
     - home
     - removable-media
