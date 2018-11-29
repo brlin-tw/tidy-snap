@@ -59,7 +59,7 @@ parts:
     source-depth: 30
 
     # For official releases
-    #source-tag: '5.6.0'
+    source-tag: '5.6.0'
 
     # For `next` branch releases
     #source-commit: 5f7e367cb54563dabda4bf4e3c11c6ecc68a0fa3
